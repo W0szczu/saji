@@ -1,0 +1,24 @@
+
+let prize = prompt("Wybierz liczbę z przedziału 0-10");
+prize = Number(prize);
+let output = "Wybrana opcja to: ";
+
+switch (prize) {
+  case 0:
+    output += "dupa ";
+  case 1:
+    output += "tak ";
+    break;
+  case 2:
+    output += "po co to czytac ";
+  case 3:
+    output += "i tak nic nie wygrales ";
+  case 4:
+    output += "gratulacje ";
+  case 5:
+    output += "brawo!1 ";
+    break;
+  default:
+    output += "Spróbuj ponownie";
+}
+console.log(output);
