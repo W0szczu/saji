@@ -1,0 +1,13 @@
+
+let wynik = "";
+
+
+let pomijanaCyfra = 5;
+
+for (let i = 0; i < 10; i++) {
+  if (i === pomijanaCyfra) {
+    continue;
+  }
+  wynik += i;
+}
+console.log("Ciąg po użyciu continue: " + wynik);
