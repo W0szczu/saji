@@ -1,0 +1,23 @@
+
+let obiekt = {
+  imie: "Jan",
+  wiek: 25,
+  miasto: "Warszawa"
+};
+
+
+console.log("Iteracja przez obiekt:");
+for (let klucz in obiekt) {
+  if (obiekt.hasOwnProperty(klucz)) {
+    console.log(klucz + ": " + obiekt[klucz]);
+  }
+}
+
+
+let tablica = ["Jan", 25, "Warszawa"];
+
+
+console.log("\nIteracja przez tablicę:");
+for (let i = 0; i < tablica.length; i++) {
+  console.log(tablica[i]);
+}
