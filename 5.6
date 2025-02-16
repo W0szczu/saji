@@ -1,0 +1,36 @@
+const grid = [];
+const totalCells = 64;
+let counter = 0;
+let row = [];
+
+for (let i = 0; i <= totalCells; i++) {
+    if (i % 8 === 0) {
+        if (row.length > 0) {
+            grid.push(row);
+        }
+        row = [];
+    }
+    
+    if (i < totalCells) {
+        row.push(counter);
+    }
+    
+    counter++;
+}
+
+console.table(grid);
+
+const numbers = [];
+for (let i = 1; i <= 10; i++) {
+    numbers.push(i);
+}
+
+console.log(numbers);
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+for (const num of numbers) {
+    console.log(num);
+}
