@@ -1,0 +1,21 @@
+const maxNumber = 5;
+const secretNumber = Math.floor(Math.random() * maxNumber) + 1; 
+let guessedCorrectly = false; 
+
+while (!guessedCorrectly) {
+    let userGuess = prompt(`Zgadnij liczbę od 1 do ${maxNumber}:`);
+    userGuess = Number(userGuess);
+
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > maxNumber) {
+        alert("Podaj liczbę z zakresu od 1 do " + maxNumber);
+        continue;
+    }
+
+    if (userGuess === secretNumber) {
+        alert("Gratulacje! Odgadłeś liczbę " + secretNumber);
+        guessedCorrectly = true;
+    } else {
+        let hint = userGuess > secretNumber ? "za duża" : "za mała";
+        alert("Nie zgadłeś! Twoja liczba jest " + hint + ". Spróbuj ponownie.");
+    }
+}
